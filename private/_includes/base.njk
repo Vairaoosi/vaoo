@@ -1,0 +1,173 @@
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="/assets/vendor/owl-slider.css"/>
+        <link rel="stylesheet" type="text/css" href="/assets/vendor/settings.css"/>       
+        <link rel="shortcut icon" href="/assets/images/favicon.png" />
+        <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+        <title>Vaira Oosi</title>
+    </head>
+
+    <body>
+    {# snipcart install #}
+<script>
+    window.SnipcartSettings = {
+        publicApiKey: 'YTkxZTkyMmYtZjNjNi00MTE5LTljYzAtMzYwZTZmNzdiZTQzNjM4NTQ0ODE1NTQ4NDc0Mjgw',
+        loadStrategy: 'on-user-interaction',
+        modalStyle: "side",
+        version: "3.7.1",
+        currency: "inr",
+        templatesUrl: "/assets/snipcart/snipcart-templates.html"
+    };
+
+    (() => {
+        var c, d;
+        (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0");
+        var s, S;
+        (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
+        var l, p;
+        (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com");
+        var w, u;
+        (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https");
+        var f = window.SnipcartSettings.version.includes("v3.0.0-ci") || window.SnipcartSettings.version != "3.0" && window.SnipcartSettings.version.localeCompare("3.4.0", void 0, { numeric: !0, sensitivity: "base" }) === -1,
+            m = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
+        
+        window.LoadSnipcart = o;
+        document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", r) : r();
+
+        function r() {
+            window.SnipcartSettings.loadStrategy ? window.SnipcartSettings.loadStrategy === "on-user-interaction" && (m.forEach(t => document.addEventListener(t, o)), setTimeout(o, window.SnipcartSettings.timeoutDuration)) : o();
+        }
+
+        var a = !1;
+
+        function o() {
+            if (a) return;
+            a = !0;
+            let t = document.getElementsByTagName("head")[0],
+                e = document.querySelector("#snipcart"),
+                i = document.querySelector(`script[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),
+                n = document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);
+
+            e || (e = document.createElement("div"), e.id = "snipcart", e.setAttribute("hidden", "true"), document.body.appendChild(e));
+            v(e);
+            
+            // Load Snipcart JavaScript
+            i || (i = document.createElement("script"), i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`, i.async = !0, t.appendChild(i));
+            
+            // Load your custom CSS with a relative URL
+            n || (n = document.createElement("link"), n.rel = "stylesheet", n.type = "text/css", n.href = "/assets/css/snipcart.css", t.prepend(n));
+            
+            m.forEach(g => document.removeEventListener(g, o));
+        }
+
+        function v(t) {
+            !f || (t.dataset.apiKey = window.SnipcartSettings.publicApiKey,
+                window.SnipcartSettings.addProductBehavior && (t.dataset.configAddProductBehavior = window.SnipcartSettings.addProductBehavior),
+                window.SnipcartSettings.modalStyle && (t.dataset.configModalStyle = window.SnipcartSettings.modalStyle),
+                window.SnipcartSettings.currency && (t.dataset.currency = window.SnipcartSettings.currency),
+                window.SnipcartSettings.templatesUrl && (t.dataset.templatesUrl = window.SnipcartSettings.templatesUrl));
+        }
+    })();
+</script>
+<!-- Snipcart checkout page -->
+
+
+
+    <div id="preloader">
+        <div class="sk-cube-grid">
+          <div class="sk-cube sk-cube1"></div>
+          <div class="sk-cube sk-cube2"></div>
+          <div class="sk-cube sk-cube3"></div>
+          <div class="sk-cube sk-cube4"></div>
+          <div class="sk-cube sk-cube5"></div>
+          <div class="sk-cube sk-cube6"></div>
+          <div class="sk-cube sk-cube7"></div>
+          <div class="sk-cube sk-cube8"></div>
+          <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div> 
+
+
+    {# <div class="pushmenu pushmenu-left cart-box-container">
+        <div class="cart-list">
+            <span id="close-pushmenu">Close</span>
+            <ul class="list">
+                <li>
+                    <a href="#" title="" class="cart-product-image"><img src="/assets/images/products/1.jpg" alt="Product"></a>
+                    <div class="text">
+                        <p class="product-name">Bouble Fabric Blazer</p>
+                        <p class="product-price">$69.90</p>
+                        <p class="qty">QTY:01</p>
+                        <a href="#" class="delete-item"></a>
+                    </div>
+                </li> 
+                <li>
+                    <a href="#" title="" class="cart-product-image"><img src="/assets/images/products/1.jpg" alt="Product"></a>
+                    <div class="text">
+                        <p class="product-name">Bouble Fabric Blazer</p>
+                        <p class="product-price">$69.90</p>
+                        <p class="qty">QTY:01</p>
+                        <a href="#" class="delete-item"></a>
+                    </div>
+                </li>                                   
+            </ul>
+            <div class="cart-bottom">
+                <p class="total"><span>Subtotal:</span> $89.90</p>
+                <a class="checkout" href="#" title="">Check out <i class="link-icon-white"></i></a>
+                <a class="edit-cart" href="#" title="edit cart">Edit cart</a>
+            </div>
+            <!-- End cart bottom -->
+        </div>
+    </div> #}
+    <!-- End cart -->
+    
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    <h4 class="modal-title" id="myLargeModalLabel">Search Here</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control control-search" placeholder="Type & hit enter...">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default button_search" type="button"><i data-toggle="dropdown" class="icons icon-magnifier dropdown-toggle"></i></button>
+                          </span>
+                    </div><!-- /input-group -->
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!-- End pushmenu -->
+    <div class="wrappage">
+
+        {% include "header.njk" %}
+
+
+        {{ content | safe }}
+
+
+        {% include "footer.njk" %}
+
+
+    </div>
+    <!-- End wrappage -->
+
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="/assets/js/engo-plugins.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="/assets/js/map-icons.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="/assets/js/store.js"></script>
+    </body>    
+</html>

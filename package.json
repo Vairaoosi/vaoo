@@ -1,0 +1,40 @@
+{
+  "name": "vairaoosi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "start:debug": "set DEBUG=* && npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vairaoosi/vairaoosi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/types": "^7.26.0",
+    "@dexus1985/eleventy-plugin-sitemap": "^0.0.26",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "@sendgrid/mail": "^8.1.4",
+    "axios": "^1.7.7",
+    "date-fns": "^3.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Vairaoosi/vairaoosi/issues"
+  },
+  "homepage": "https://github.com/Vairaoosi/vairaoosi#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "wrangler": "^3.86.0"
+  }
+}

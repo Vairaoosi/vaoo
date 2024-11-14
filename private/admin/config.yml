@@ -1,0 +1,112 @@
+backend:
+  name: github
+  repo: Vairaoosi/vairaoosi
+  branch: main
+  site_domain: https://vairaoosi.com
+  base_url: https://vairaoosi.com
+  auth_endpoint: /api/auth
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+media_folder: "private/assets/images/VairaoosiProducts"
+public_folder: "/assets/images/VairaoosiProducts"
+collections:
+   - name: "vairaoosi"
+     label: "Product: Vaira Oosi Sarees"
+     folder: "private/products"
+     create: true
+     slug: "{{year}}-{{month}}-{{day}}_{{title}}_{{some_other_field}}"
+     fields:
+      - { label: "SKU", name: "sku", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - label: "For SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "meta", widget: "text" }
+          - { label: "Keywords", name: "keywords", widget: "string" }
+          - { label: "Product Image Alt", name: "alt", widget: "string" }
+
+      - label: "Product Details"
+        name: "productdetails"
+        widget: "object"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Product Price", name: "price", widget: "string" }
+          - { label: "Short Description", name: "shortdescription", widget: "text" }
+          - { label: "Description", name: "description", widget: "text" }
+
+      - label: "Product Images for Home and All Products page (700x800 px)"
+        name: "productimage700x800"
+        widget: "object"
+        fields:
+          - { label: "Primary Image", name: "primaryimg1", widget: "image" }
+          - { label: "Secondary Image", name: "secondaryimg1", widget: "image" }
+
+      - label: "Product Image for Product datails page (1000x1140 px)"
+        name: "productimage1000x1140"
+        widget: "object"
+        fields:
+          - { label: "Primary Image", name: "primaryimg2", widget: "image" }
+          - { label: "Secondary Image", name: "secondaryimg2", widget: "image" }
+          - { label: "Third Image", name: "thirdimg2", widget: "image" }
+
+      - label: "Product Image for Snipcart (190x160 px)"
+        name: "snipcartimg190x160"
+        widget: "object"
+        fields:
+          - { label: "Product Image for snipcart 190x160", name: "snipcartimg", widget: "image" }
+       
+      - { label: "Trending", name: "trending", widget: "boolean", default: false, required: false }
+      - { label: "Discounted", name: "discounted", widget: "boolean", default: false, required: false }
+      - { label: "Discount Percentage", name: "discountpercent", widget: "string", required: false }
+
+      - { label: "Multicolor", name: "multicolor", widget: "boolean", default: false, required: false }
+      - { label: "Red", name: "red", widget: "boolean", default: false, required: false }
+      - { label: "Blue", name: "blue", widget: "boolean", default: false, required: false }
+      - { label: "Green", name: "green", widget: "boolean", default: false, required: false }
+      - { label: "Yellow", name: "yellow", widget: "boolean", default: false, required: false }
+      - { label: "Pink", name: "pink", widget: "boolean", default: false, required: false }
+      - { label: "Violet", name: "violet", widget: "boolean", default: false, required: false }
+      - { label: "Black", name: "black", widget: "boolean", default: false, required: false }
+      - { label: "White", name: "white", widget: "boolean", default: false, required: false }
+      - { label: "Grey", name: "grey", widget: "boolean", default: false, required: false }
+      - { label: "Brown", name: "brown", widget: "boolean", default: false, required: false }
+      - { label: "Orange", name: "orange", widget: "boolean", default: false, required: false }
+
+#   - name: "realestate"
+#     label: "Real Estate Blog"
+#     folder: "private/real-estate/posts"
+#     create: true
+#     slug: "{{year}}-{{month}}-{{day}}_{{title}}_{{some_other_field}}"
+#     fields:
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Meta description", name: "meta", widget: "string" }
+#       - { label: "Keywords", name: "keywords", widget: "string" }
+#       - { label: "Date", name: "date", widget: "datetime" }
+#       - { label: "Featured Image", name: "img", widget: "image" }
+#       - { label: "Featured Image Alt", name: "alt", widget: "string" }
+#       - { label: "Is featured?", name: "featured", widget: "boolean", default: false }
+#       - { label: "Is the post Ad Enabled?", name: "adenabled", widget: "boolean", default: false }
+#       - { label: "Body", name: "body", widget: "markdown" }
+
+#   - name: "homeandgarden"
+#     label: "Home and Garden"
+#     folder: "private/home-and-garden/posts"
+#     create: true
+#     slug: "{{year}}-{{month}}-{{day}}_{{title}}_{{some_other_field}}"
+#     fields:
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Meta description", name: "meta", widget: "string" }
+#       - { label: "Keywords", name: "keywords", widget: "string" }
+#       - { label: "Date", name: "date", widget: "datetime" }
+#       - { label: "Featured Image", name: "img", widget: "image" }
+#       - { label: "Featured Image Alt", name: "alt", widget: "string" }
+#       - { label: "Is featured?", name: "featured", widget: "boolean", default: false }
+#       - { label: "Is the post Ad Enabled?", name: "adenabled", widget: "boolean", default: false }
+#       - { label: "Body", name: "body", widget: "markdown" }

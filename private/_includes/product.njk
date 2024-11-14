@@ -1,0 +1,201 @@
+---
+layout: base.njk
+---
+
+            <div class="container">
+                <div class="banner-product-details3">
+                    <img src="/assets/images/banner-catalog2.jpg" alt="Banner">
+                    <h3>{{ productdetails.name }}</h3>
+                </div>
+            </div>
+            <!-- End product details -->
+          
+                <div class="container container-ver2">     
+                    <div class="product-details-content">
+                        <div class="col-md-6">
+                            <div class="product-img-box product-img-box-v2">
+                            <a id="image-view" title="Product Image">
+                              <img id="image" src="{{ productimage1000x1140.primaryimg2 }}" alt="Product"/>
+                            </a>
+                                  <div class="product-thumb">
+                                      <ul class="thumb-content">
+                                          <li class="thumb"><a href="{{ productimage1000x1140.primaryimg2 }}" title="thumb product view1" onclick="swap(this);return false;"><img src="{{ productimage1000x1140.primaryimg2 }}" alt="thumb product1"/></a></li>
+                                          <li class="thumb"><a href="{{ productimage1000x1140.secondaryimg2 }}" title="thumb product view1" onclick="swap(this);return false;"><img src="{{ productimage1000x1140.secondaryimg2 }}" alt="thumb product1"/></a></li>
+                                          <li class="thumb"><a href="{{ productimage1000x1140.thirdimg2 }}" title="thumb product view1" onclick="swap(this);return false;"><img src="{{ productimage1000x1140.thirdimg2 }}" alt="thumb product1"/></a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <!-- End product-img-box -->
+                        </div>
+                        <div class="col-md-6 box-detalis-v2">
+                            <div class="box-details-info">
+                                <div class="breadcrumb">
+                                    <ul>
+                                        <li><a href="/">Home</a></li>
+                                        <li class="active">Product Details</li>
+                                    </ul>
+                                </div>
+                                <div class="product-name">
+                                    <h1>{{ productdetails.name }}</h1>
+                                </div>
+                                <!-- End product-name -->
+                                {# <div class="rating">
+                                    <div class="overflow-h">
+                                        <div class="icon-rating">  
+                                            <input type="radio" id="star-horizontal-rating-1" name="star-horizontal-rating" checked="">    
+                                            <label for="star-horizontal-rating-1"><i class="fa fa-star"></i></label> 
+                                            <input type="radio" id="star-horizontal-rating-2" name="star-horizontal-rating" checked="">    
+                                            <label for="star-horizontal-rating-2"><i class="fa fa-star"></i></label>
+                                            <input type="radio" id="star-horizontal-rating-3" name="star-horizontal-rating" checked="">    
+                                            <label for="star-horizontal-rating-3"><i class="fa fa-star"></i></label>
+                                            <input type="radio" id="star-horizontal-rating-4" name="star-horizontal-rating">    
+                                            <label for="star-horizontal-rating-4"><i class="fa fa-star"></i></label>
+                                            <input type="radio" id="star-horizontal-rating-5" name="star-horizontal-rating">    
+                                            <label for="star-horizontal-rating-5"><i class="fa fa-star"></i></label>
+                                        </div>
+                                        <span>3 Rating(s)</span>
+                                    </div>
+                                </div> #}
+                                <!-- End Rating -->
+                                <div class="wrap-price" style="padding-top: 20px;">
+                                    <p class="price">₹{{ productdetails.price }}</p>
+                                </div>
+                                <!-- End Price -->
+                            </div>
+                            <!-- End box details info -->
+                            <div class="options">
+                                <p>{{ productdetails.shortdescription }}</p>
+                                <div class="action">
+                                    <form enctype="multipart/form-data">
+                                        <div class="product-signle-options product_15 clearfix">
+                                            <div class="selector-wrapper size">
+                                                <div class="quantity">
+                                                    <input data-step="1" value="1" title="Qty" class="qty" size="4" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <a class="link-ver1 add-cart snipcart-add-item" data-item-id="{{ sku }}" data-item-name="{{ productdetails.name }}" data-item-price="{{ productdetails.price }}" data-item-image="{{ snipcartimg190x160.snipcartimg }}" title="Add to cart" href="#"><i class="icon-bag"></i><span>Add to cart</span></a>
+                                    <a class="link-ver1 wish" title="Wishlist" href="#"><i class="icon icon-heart"></i></a>
+                                    <a class="link-ver1 chart" title="Compare" href="#"><i class="icon icon-bar-chart"></i></a>
+                                </div>
+                                <!-- End action -->
+                                <div class="infomation">
+                                    <p class="sku"><span>SKU: </span>{{ sku }}</p>
+                                    {# <p class="category"><span>Category: </span> Swteaters</p>
+                                    <p class="tags"><span>Tags: </span>Sweaters, Turtleneck, Wool</p> #}
+                                </div>
+                                <!-- Infomation -->
+                                <div class="social">
+                                    <a title="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a title="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a title="google plus" href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a title="pinter" href="#"><i class="fa fa-pinterest-p"></i></a>
+                                </div>
+                                <!-- End share -->
+                            </div>
+                            <!-- End Options -->
+                        </div>  
+                    </div>   
+                    <!-- End product-details-content -->
+                    </div>
+                    <div class="container">
+                    <div class="hoz-tab-container space-padding-tb-40 slider-product tabs-title-v2">
+                        <ul class="tabs">
+                            <li class="item" rel="description">Description</li>
+                            <li class="item" rel="product-tags">ADDITIONAL INFORMATION</li>
+                            {# <li class="item" rel="customer">REVIEWS (5)</li> #}
+                        </ul>
+                        <div class="tab-container">
+                            <div id="description" class="tab-content mockup mockup-v3">
+                               <p class="center">{{ productdetails.description }}</p>
+                            </div>
+                            <!-- End description -->
+                            <div id="product-tags" class="tab-content">
+                                <h3 class="space-20">Product tags</h3>
+                                <p>Other  people marked this product with these tags</p>
+                                <p>Sumer collection (2) </p>
+                                <p>Fashion accessories (2)</p>
+                                <a class="button-v2 hover-black color-black" href="#" title="add tags">add tags <i class="link-icon-black"></i></a>
+                            </div>
+                            {# <div id="customer" class="tab-content">
+                                <div class="col-md-6">
+                                    <h3 class="space-10">Customer Review</h3>
+                                    <div class="space-10">
+                                        <p>Perfect <strong>Review by Tony</strong></p>
+                                        
+                                        <p>Like (Posted on {{ date }})</p>
+                                    </div>
+                                    <div class="space-padding-tb-40">
+                                        <h4>Customer Review</h4>
+                                        <p>You're reviewing: Wash Out Parama</p>
+                                        <p>How do you rate this product?*</p>
+                                    </div>
+                                    <div class="space-10">
+                                        <h4>Customer Review</h4>
+                                        <form class="radio customer-radio">
+                                            <input type="radio" id="star-1" value="1" name="star"/>
+                                            <label for="star-1">01 star</label>
+                                            <input type="radio" id="star-2" value="2" name="star" />
+                                            <label for="star-2">02 star</label>
+                                            <input type="radio" id="star-3" value="3" name="star" />
+                                            <label for="star-3">03 star</label>
+                                            <input type="radio" id="star-4" value="4" name="star" checked/>
+                                            <label for="star-4">04 star</label>
+                                            <input type="radio" id="star-5" value="5" name="star" />
+                                            <label for="star-5">05 star</label>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class=" control-label" for="inputName">Nick Name*</label>
+                                                <input type="text" class="form-control" id="inputName" placeholder="Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label" for="inputsumary">Summary of Your Review *</label>
+                                                <input type="text" class="form-control" id="inputsumary" placeholder="Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label" for="inputReview">Review*</label>
+                                                <input type="text" class="form-control" id="inputReview" placeholder="Review*">
+                                            </div>
+                                            <a class="button-v2 hover-black color-black" href="#" title="add tags">Submit review<i class="link-icon-black"></i></a>
+                                        </form>
+                                </div>
+                            </div> #}
+                        </div>
+                    </div>
+                    <!-- tab-container -->
+                    <div class="title-product">
+                        <h3>upsell products</h3>
+                    </div>   
+                    <!-- End title -->
+                    <div class="upsell-product products owl-nav-hidden">
+                            {% for prdt in collections.trendingproduct %}
+                                    <div class="item-inner">
+                                        <div class="product">
+                                            <div class="product-images">
+                                                <a href="{{ prdt.url }}" title="product-images">
+                                                    <img class="primary_image" src="{{ prdt.data.productimage700x800.primaryimg1 }}" alt="{{ prdt.data.seo.alt }}"/>
+                                                    <img class="secondary_image" src="{{ prdt.data.productimage700x800.secondaryimg1 }}" alt="{{ prdt.data.seo.alt }}"/>
+                                                </a>
+                                                <div class="action">
+                                                    <a class="zoom" href="{{ prdt.url }}" title="Quick view" ><i class="icon icon-magnifier-add "></i></a>
+                                                    <a class="wish" href="#" title="Wishlist" ><i class="icon icon-heart"></i></a>
+                                                    <a class="add-cart snipcart-add-item" data-item-id="{{ prdt.data.sku }}" data-item-name="{{ prdt.data.productdetails.name }}" data-item-price="{{ prdt.data.productdetails.price }}" data-item-image="{{ prdt.data.snipcartimg190x160.snipcartimg }}" href="{{ prdt.url }}" title="Add to cart" ><i class="icon-bag"></i></a>
+                                                </div>
+                                            </div>
+                                            <a href="{{ prdt.url }}" title="{{ prdt.data.productdetails.name }}"><p class="product-title">{{ prdt.data.productdetails.name }}</p></a>
+                                            <p class="product-price">₹{{ prdt.data.productdetails.price }}</p>
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- End item -->
+                            {% endfor %}
+                    </div>
+                </div>
+
+
+

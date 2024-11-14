@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Address Fields</title>
+  </head>
+  <body>
+    <div id="snipcart-templates">
+      <!-- Override the address-fields component -->
+      <address-fields>
+        <div>
+          <fieldset class="snipcart-form__set">
+            <div class="snipcart-form__row">
+              <!-- Address 1 Field -->
+              <div class="snipcart-form__field snipcart-form__cell--large">
+                <snipcart-label
+                  class="snipcart__font--tiny"
+                  for="address1"
+                >Address Line 1</snipcart-label>
+                <snipcart-input name="address1"></snipcart-input>
+                <snipcart-error-message name="address1"></snipcart-error-message>
+              </div>
+
+              <!-- Address 2 (Apt/Suite) - Removed -->
+                <div class="snipcart-form__field snipcart-form__cell--large">
+                <snipcart-label
+                  class="snipcart__font--tiny"
+                  for="address2"
+                >Address Line 2</snipcart-label>
+                <snipcart-input name="address2"></snipcart-input>
+                <snipcart-error-message name="address2"></snipcart-error-message>
+              </div>
+              <!-- This field is removed, so no input for Apt/Suite -->
+            </div>
+
+            <!-- City Field -->
+            <div class="snipcart-form__field">
+              <snipcart-label
+                class="snipcart__font--tiny"
+                for="city"
+              >City</snipcart-label>
+              <snipcart-input name="city"></snipcart-input>
+              <snipcart-error-message name="city"></snipcart-error-message>
+            </div>
+
+            <div class="snipcart-form__row">
+              <!-- Province Field (Dropdown Typeahead) -->
+              <div class="snipcart-form__field snipcart-form__cell--large">
+                <snipcart-label
+                  class="snipcart__font--tiny"
+                  for="province"
+                >State</snipcart-label>
+                <snipcart-typeahead type="dropdown" name="State" autocomplete="province state"></snipcart-typeahead>
+              </div>
+
+              <!-- Postal Code Field -->
+              <div class="snipcart-form__field snipcart-form__cell--tidy">
+                <snipcart-label
+                  class="snipcart__font--tiny"
+                  for="postalCode"
+                >Postal Code</snipcart-label>
+                <snipcart-input name="postalCode"></snipcart-input>
+                <snipcart-error-message name="postalCode"></snipcart-error-message>
+              </div>
+            </div>
+            <!-- Country Field (Dropdown Typeahead) -->
+            <div class="snipcart-form__field">
+              <snipcart-label
+                class="snipcart__font--tiny"
+                for="country"
+              >Country</snipcart-label>
+              <snipcart-typeahead type="dropdown" name="country" autocomplete="country"></snipcart-typeahead>
+            </div>
+          </fieldset>
+                <fieldset class="snipcart-form__set">
+
+                <div class="snipcart-form__field">
+
+                  <snipcart-checkbox name="acceptTerms" required></snipcart-checkbox>
+
+                  <snipcart-label for="acceptTerms">I accept the <a href="/terms-and-conditions">Terms and Conditions</a></snipcart-label>
+
+                </div>
+
+            </fieldset>
+        </div>
+      </address-fields>
+    </div>
+  </body>
+</html>

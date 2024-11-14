@@ -1,0 +1,86 @@
+---
+layout: base.njk
+title: White
+---
+
+         <div class="container">
+            <div class="banner-header banner-lbook3">
+                <img src="/assets/images/vairaoosi-catalog1.jpg" alt="Banner-header">
+                <div class="text">
+                    <h3>{{ title }}</h3>
+                    <img class="border" src="/assets/images/vairaoosi-slideshow-border-home1.png" alt="border">
+                    <p>Buy your preferred {{ title }} color Sarees</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="wrap-breadcrumb">
+             <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li class="active">{{ title }} Collection</li>
+            </ul>
+            <div class="ordering-action">
+                {# <a href="#" title=""><span class="icons icon-equalizer"></span></a> #}
+            </div>
+
+            <div class="ordering">
+                <p class="result-count">Showing {{ collections.whitesaree.length }} results</p>
+                {# <form class="order-by" method="get" action="#">
+                    <select name="orderby" class="orderby">
+                            <option selected="selected">Sort by popularity</option>
+                            <option>Sort by average rating</option>
+                            <option>Sort by newness</option>
+                    </select>
+                </form> #}
+            </div>
+            </div>
+        </div>
+        <!-- End wrap-breadcrumb -->
+        <div class="container">
+            <div class="tab-product-all">
+                <ul class="tabs tabs-title">
+                    
+                </ul>
+                <div class="tab-container">
+                    <div id="all" class="tab-content">
+                        <div class="products">
+                            {% for prdt in collections.whitesaree %}
+                            <div class="item-inner">
+                                <div class="product">
+                                    <div class="product-images">
+                                        <a href="{{ prdt.url }}" title="product-images">
+                                            <img class="primary_image" src="{{ prdt.data.productimage700x800.primaryimg1 }}" alt="{{ prdt.data.seo.alt }}"/>
+                                            <img class="secondary_image" src="{{ prdt.data.productimage700x800.secondaryimg1 }}" alt="{{ prdt.data.seo.alt }}"/>
+                                        </a>
+                                        <div class="action">
+                                            <a class="zoom" href="{{ prdt.url }}" title="Quick view"><i class="icon icon-magnifier-add"></i></a>
+                                            <a class="wish" href="{{ prdt.url }}" title="Wishlist" ><i class="icon icon-heart"></i></a>
+                                            <a class="add-cart snipcart-add-item" data-item-id="{{ prdt.data.sku }}" data-item-name="{{ prdt.data.productdetails.name }}" data-item-price="{{ prdt.data.productdetails.price }}" data-item-image="{{ prdt.data.snipcartimg190x160.snipcartimg }}" href="{{ prdt.url }}" title="Add to cart"><i class="icon-bag"></i></a>
+                                        </div>
+                                    </div>
+                                    <a href="{{ prdt.url }}" title="{{ prdt.data.productdetails.name }}"><p class="product-title">{{ prdt.data.productdetails.name }}</p></a>
+                                    <p class="product-price">₹{{ prdt.data.productdetails.price }}</p>
+                                    
+                                </div>
+                            </div>
+                            <!-- End item -->
+                            {% endfor %}
+                        </div>
+                        <!-- End product-tab-content products -->
+                    </div>
+                    {# <div class="pagination-container">
+                        <nav class="pagination">    
+                            <a class="prev page-numbers" href="#"><i class="fa fa-angle-left"></i></a>
+                            <span class="page-numbers current">1</span>
+                            <a class="page-numbers" href="#">2</a>
+                            <a class="page-numbers" href="#">3</a>
+                            <a class="next page-numbers" href="#"><i class="fa fa-angle-right"></i></a>
+                        </nav>
+                    </div> #}
+                    <!-- End pagination-container -->
+                </div>
+                <!-- End tab-container -->
+            </div>
+        </div>
+        <!-- end tab product all -->
